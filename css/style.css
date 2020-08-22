@@ -115,6 +115,11 @@ p.small-descr{
 	justify-content: center;
 	align-items: center;
 }
+.c-s{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
 .main-content,.header-inner{
 	max-width:1680px;
 	margin: 0 auto;
@@ -125,7 +130,13 @@ p.small-descr{
 	width: 100%;
 	z-index: 300;
 }
-
+.site-logo picture{
+	width: 100%;
+}
+.site-logo img{
+	width: 3100%;
+	max-width: 300px;
+}
 .blur{
 	border: 1px #000;
 	background-color: rgba(19, 26, 36,0.5);
@@ -214,6 +225,7 @@ font-family: 'Lora',sans-serif;
 	background: url('../img/hero-img.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center right;
 	padding-top: 10rem;
 	padding-bottom: 6rem;
 }
@@ -260,7 +272,6 @@ font-family: 'Lora',sans-serif;
 	padding: 0 30px;
 }
 .hero-steps{
-	padding-right: 8.33%;
 	display: flex;
 	justify-content:flex-end ;
 	align-items: center;
@@ -346,7 +357,7 @@ font-family: 'Lora',sans-serif;
 .rights-card{
 	margin-top: 2.5rem;
 }
-.your-rights,.services,.cta,.steps,.faq{
+.your-rights,.services,.cta,.steps,.faq,.contacts,.footer{
 	margin-top: 5rem;
 }
 .content-block .h2-title{
@@ -568,6 +579,30 @@ margin-bottom: 1rem;
 	width: 100%;
 	max-width: 1.5rem;
 }
+
+.dots{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding-top: 1rem;
+}
+.dots__item{
+	border-radius: 0.75rem;
+	padding: 0;
+	outline: none;
+	border: none;
+	margin: 0.3rem;
+	background: rgba(209, 145, 48,1);
+	display: block;
+	box-sizing: border-box;
+	opacity: 0.4;
+	width: 0.5rem;
+height: 0.5rem;
+}
+.dots__item--active{
+opacity: 1;
+}
 .about-work{
 	margin-bottom: 1.5rem;
 	padding-bottom: 1.5rem;
@@ -593,6 +628,9 @@ margin-bottom: 1rem;
 }
 .read-all-text:hover .button-icon{
 	transform: translate(3px,0);
+}
+.inline-cta-inner .main-button{
+margin-top: 1.5rem;
 }
 
 /* question */
@@ -656,9 +694,151 @@ opacity: 0.7;
 	padding:  1rem 0.5rem;
 }
 .question-descr{
-
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 		user-select: none;
+}
+
+/* contacts */
+.contacts-title.h2-title{
+	margin-bottom: 2rem;
+}
+.contacts-line{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 1.25rem;
+}
+.contacts-inner{
+	padding: 10%;
+}
+.contacts-inner p.small-descr{
+	color: rgba(255, 255, 255,0.5);
+	margin-bottom: 0;
+}
+.contacts-button{
+	margin-top: 3rem;
+}
+.contacts-sub{
+	font-size: 0.85rem;
+	color: rgba(255, 255, 255,0.5);
+	margin-bottom: 0.5rem;
+}
+.contacts-outer{
+	background: #131A24;
+}
+.map{
+height: 100%;
+	width: 100%;
+}
+.file-icon {
+	stroke: #fff;
+	margin-right: 0.5rem;
+	transition: 200ms ease-in;
+	transition-property: stroke;
+}
+a.contacts-line-title{
+	color: #fff;
+	text-decoration: none;
+	transition: 200ms ease-in;
+	transition-property: color;
+}
+a.contacts-line-title:hover{
+	color: #D19130;
+}
+a.contacts-line-title:hover .file-icon {
+	stroke: #D19130;
+}
+[class*="ymaps-2"][class*="-ground-pane"] {
+	filter: grayscale(70%) brightness(80%) hue-rotate(180deg);
+  filter: url(/img/filters.svg#grayscale); /* Firefox 3.5+ */
+	-webkit-filter: grayscale(0.8) brightness(80%) hue-rotate(180deg); /* Google Chrome & Safari 6+ */
+	opacity: 1;
+}
+
+/* footer */
+.footer{
+}
+.footer-inner{
+	border-top: 1px solid rgba(255, 255, 255,0.15);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.footer-logo{
+	flex: 0 0 25%;
+	width:100%;
+	max-width: 25%;
+}
+.footer-logo img{
+	width: 100%;
+}
+.footer-links{
+	flex: 0 0 75%;
+	width:100%;
+	max-width: 75%;
+}
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+.footer-links li a {
+	font-size: 1rem;
+	color: #fff;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	transition: 200ms ease-in;
+	transition-property: opacity;
+}
+.footer-links li a:hover {
+	opacity: 0.7;
+}
+@media (min-width: 992px) and (max-width: 1280px){
+	.stat-graph-outer{
+		position: sticky;
+		top: 4rem;
+	}
+	.legend-icon{
+		margin-right: 0.5rem;
+	}
+
+}
+@media  (max-width: 1280px){
+	.stat-graph{
+		padding: 1.5rem;
+	}
+	.navigation ul li a{
+		padding: 0.35rem 0.75rem;;
+	}
+	.navigation ul li{
+		margin: 0 0.25rem;
+	}
+	.site-logo img{
+		max-width: 250px;
+	}
+}
+
+@media (max-width: 993px){
+html{
+	font-size: 15px;
+}
+.nav-outer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 20px;
+
+}
+.nav-outer ul{
+	flex-direction: column;
+	align-items: flex-start;
+}
 }
