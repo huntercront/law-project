@@ -28,7 +28,7 @@
 
                     iconLayout: 'default#image',
 
-                    iconImageHref: '../img/map-pin/map-pin.svg',
+                    iconImageHref: './img/map-pin/map-pin.svg',
 
                     iconImageSize: [60, 60],
                     iconImageOffset: [-45, -55]
